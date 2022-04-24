@@ -1,27 +1,25 @@
 package com.company;
 
 
-    public class Group {
+import java.util.ArrayList;
+
+public class Group {
         private String groupName;
         private int course;
         private Student student;
         private  Teacher teacher;
-        private Student[] pupil;
+        private ArrayList<Student> pupil;
 
-        public void setPupil(Student[] pupil) {
-            this.pupil = pupil;
-        }
 
-        public Group(Student[] pupil) {
-            this.pupil = pupil;
+    public Group(ArrayList<Student> pupil) {
+        this.pupil = pupil;
+    }
 
-        }
+    public ArrayList<Student> getPupil() {
+        return pupil;
+    }
 
-        public void setStudents(Student[] pupil) {
-            this.pupil = pupil;
-        }
-
-        public String getGroupName() {
+    public String getGroupName() {
             return groupName;
         }
         public int getCourse() {
@@ -33,12 +31,11 @@ package com.company;
         public Teacher getTeacher() {
             return teacher;
         }
-        public Group(String groupName, int course, Student student, Teacher teacher, Student[] pupil) {
+        public Group(String groupName, int course, Student student, Teacher teacher) {
             this.groupName = groupName;
             this.course = course;
             this.student = student;
             this.teacher = teacher;
-            this.pupil = pupil;
         }
         public void displayInfo(){
             System.out.println("Группа" + " | " + groupName + " " + "Курс" + " | " + course + " " + student.displayInfo() + " " + teacher.displayInfo());
