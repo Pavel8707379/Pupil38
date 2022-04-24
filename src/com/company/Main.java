@@ -26,8 +26,10 @@ public class Main {
         result.add(0, student);
         result.add(1, student1);
         result.add(2, student2);
+        result.remove(1);
         for (Student s : result) {
             System.out.println(s);
+
         }
 
         }
