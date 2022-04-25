@@ -17,6 +17,7 @@ public class Main {
         Address address2 = new Address("Grodno", "Mira", 34, 56);
         Address address3 = new Address("Brest", "Centralnaya", 87, 2);
         Address address4 = new Address("Mogilew", "Lenina", 167, 94);
+
         Student student = new Student("Anton", "Fillipov", 23,address1);
         Student student1 = new Student("Irina", "Frolova", 21,  address2);
         Student student2 = new Student("Alina", "Ivanova", 22, address3);
@@ -26,13 +27,16 @@ public class Main {
         result.add(0, student);
         result.add(1, student1);
         result.add(2, student2);
+
         result.remove(1);
-        for (Student s : result) {
-            System.out.println(s);
+        result.get(0);
+        result.get(1);
 
-        }
+        result.forEach (s -> {
+            System.out.println(s);});
 
-        }
+    }
+}
 
 
 
@@ -43,4 +47,4 @@ public class Main {
 
 
 
-        }
+
