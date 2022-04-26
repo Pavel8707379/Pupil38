@@ -26,7 +26,7 @@ public class Student {
             this.age = age;
             this.address = address;
         }
-        public String displayInfo() {
+        public String toString() {
             return "Учащийся" + " | " + name + " " + surname + " " + age + " " + address.displayInfo();
         }
     }

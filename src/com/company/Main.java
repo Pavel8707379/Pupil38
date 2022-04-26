@@ -40,10 +40,7 @@ public class Main {
 
 
 
-//        pupil[0] = pupil1;
-//        pupil[1] = pupil2;
-//        pupil[2] = pupil3;
-//        pupil[3] = pupil4;
+
 
 
 

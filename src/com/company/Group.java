@@ -35,6 +35,6 @@ public class Group {
             this.pupil = pupil;
         }
         public void displayInfo(){
-            System.out.println("Группа" + " | " + groupName + " " + "Курс" + " | " + course + " " + student.displayInfo() + " " + teacher.displayInfo());
+            System.out.println("Группа" + " | " + groupName + " " + "Курс" + " | " + course + " "  + " " + teacher.displayInfo());
         }
     }
