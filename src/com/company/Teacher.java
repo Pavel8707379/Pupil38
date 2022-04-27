@@ -1,6 +1,8 @@
 package com.company;
 
-    public class Teacher {
+import com.company.exception.AgeException;
+
+public class Teacher extends AgeException {
         public String name;
         private String surName;
         private int age;
@@ -34,7 +36,8 @@ package com.company;
         public Address getAddress() {
             return address;
         }
-        public Teacher(String name, String surName, int age, int day, int time, int rate, Address address) {
+        public Teacher(String name, String surName, int age, int day, int time, int rate, Address address, String message) {
+            super(message);
             this.name = name;
             this.surName = surName;
             this.age = age;

@@ -1,14 +1,15 @@
 package com.company;
 
-public class Student {
+import com.company.exception.AgeException;
+
+public class Student extends AgeException {
         private String name;
         private String surname;
         private int age;
         private Address address;
 
 
-
-        public String getName() {
+    public String getName() {
             return name;
         }
         public String getSurname() {
@@ -20,7 +21,8 @@ public class Student {
         public Address getAddress() {
             return address;
         }
-        public Student(String name, String surname, int age, Address address) {
+        public Student(String name, String surname, int age, Address address, String message) {
+            super(message);
             this.name = name;
             this.surname = surname;
             this.age = age;
