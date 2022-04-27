@@ -2,7 +2,7 @@ package com.company;
 
 import com.company.exception.AgeException;
 
-public class Teacher extends AgeException {
+public class Teacher {
         public String name;
         private String surName;
         private int age;
@@ -36,8 +36,7 @@ public class Teacher extends AgeException {
         public Address getAddress() {
             return address;
         }
-        public Teacher(String name, String surName, int age, int day, int time, int rate, Address address, String message) {
-            super(message);
+        public Teacher(String name, String surName, int age, int day, int time, int rate, Address address) {
             this.name = name;
             this.surName = surName;
             this.age = age;

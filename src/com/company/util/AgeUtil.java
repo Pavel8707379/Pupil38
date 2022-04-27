@@ -10,25 +10,24 @@ public class AgeUtil {
     public static void checkAge (int age) {
         try {
             checkAgeTeacher(age);
-        } catch (Teacher e) {
+            checkAgeStudent(age);
+
+
+        } catch (TeacherException | StudentException e) {
             e.printStackTrace();
-            try {
-                checkAgeStudent(age);
-            } catch (Student ex) {
-                ex.printStackTrace();
-            }
+
         } finally {
             System.out.println("Конец");
         }
     }
-        private static void checkAgeTeacher ( int age) throws Teacher {
+        private static void checkAgeTeacher ( int age) throws TeacherException {
             if (age > 70) {
-                throw new Teacher("Пенсионный возраст");
+                throw new TeacherException("Пенсионный возраст");
             }
         }
-        private static void checkAgeStudent ( int age) throws Student {
-            if (age < 16) {
-                throw new Student();
+        private static void checkAgeStudent ( int age) throws StudentException {
+            if (age > 16) {
+                throw new StudentException("Поступающий абитуриент");
             }
         }
     }

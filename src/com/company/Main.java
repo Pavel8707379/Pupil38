@@ -1,19 +1,13 @@
 package com.company;
 
 import com.company.exception.AgeException;
+import com.company.util.AgeUtil;
 
 import java.util.ArrayList;
 
 public class Main {
 
     public static void main(String[] args) {
-        //Students = {st1, st2, st3} ->
-        //{st1, null,st3} ->
-        //{st1, st3}
-        //
-        //if(Students[i] == st2){
-        //	Students[i] = null;
-        //}
 
         Address address1 = new Address("Minsk", "Esenina", 120,15);
         Address address2 = new Address("Grodno", "Mira", 34, 56);
@@ -33,11 +27,12 @@ public class Main {
         result.remove(1);
         result.get(0);
         result.get(1);
-
         result.forEach (s -> {
             System.out.println(s);});
 
+        AgeUtil.checkAge(40);
     }
+
 }
 
 
