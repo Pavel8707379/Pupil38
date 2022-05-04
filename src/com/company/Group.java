@@ -9,10 +9,10 @@ public class Group {
         private Student student;
         private  Teacher teacher;
         private ArrayList<Student> pupil;
+        private ArrayList<Teacher> pupils;
 
-
-    public Group(ArrayList<Student> pupil) {
-        this.pupil = pupil;
+    public ArrayList<Teacher> getPupils() {
+        return pupils;
     }
 
     public ArrayList<Student> getPupil() {
@@ -31,13 +31,15 @@ public class Group {
         public Teacher getTeacher() {
             return teacher;
         }
-        public Group(String groupName, int course, Student student, Teacher teacher) {
+        public Group(String groupName, int course, Student student, Teacher teacher, ArrayList<Student>pupil, ArrayList<Teacher> pupils) {
             this.groupName = groupName;
             this.course = course;
             this.student = student;
             this.teacher = teacher;
+            this.pupil = pupil;
+            this.pupils = pupils;
         }
         public void displayInfo(){
-            System.out.println("Группа" + " | " + groupName + " " + "Курс" + " | " + course + " " + student.displayInfo() + " " + teacher.displayInfo());
+            System.out.println("Группа" + " | " + groupName + " " + "Курс" + " | " + course + " "  + " " + teacher.displayInfo());
         }
     }
