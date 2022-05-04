@@ -35,7 +35,12 @@ public class Main {
             teachers.stream().filter(s -> s.getName().equals("A")).forEach(s -> System.out.println(s));
             return stream;
         }
-    }
+        public static Stream<Teacher> teacherStream (List<Teacher>teachers) {
+        Stream stream1 = teachers.stream();
+        teachers.stream().sorted().forEach(x -> System.out.println(x));
+        return stream1;
+        }
+}
 
 
 
@@ -44,6 +49,3 @@ public class Main {
 //        pupil[2] = pupil3;
 //        pupil[3] = pupil4;
 
-
-
-        }
