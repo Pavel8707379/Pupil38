@@ -50,4 +50,18 @@ package com.company;
         public String displayInfo(){
             return  "Преподаватель" + " |" + name + " " + surName + " " + age + " " + address.displayInfo() + " " + "ЗП" + " | " + sum;
         }
+
+        @Override
+        public String toString() {
+            return "Teacher{" +
+                    "name='" + name + '\'' +
+                    ", surName='" + surName + '\'' +
+                    ", age=" + age +
+                    ", day=" + day +
+                    ", time=" + time +
+                    ", rate=" + rate +
+                    ", address=" + address +
+                    ", sum=" + sum +
+                    '}';
+        }
     }

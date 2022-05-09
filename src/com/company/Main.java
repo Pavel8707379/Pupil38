@@ -7,11 +7,14 @@ import java.util.stream.Stream;
 public class Main {
 
     public static void main(String[] args) {
+        List<Teacher> teachers1 = creatTeachers();
+        teacherFilter(teachers1);
+        teacherStream(teachers1);
 
 
     }
 
-        public static List<Teacher> teachers() {
+        public static List<Teacher> creatTeachers() {
             Address address1 = new Address("Minsk", "Esenina", 120, 15);
             Address address2 = new Address("Grodno", "Mira", 34, 56);
             Address address3 = new Address("Brest", "Centralnaya", 87, 2);
@@ -26,7 +29,7 @@ public class Main {
             teachers.add(teacher1);
             teachers.add(teacher2);
             teachers.add(teacher3);
-            return teachers();
+            return teachers;
         }
 
         public static Stream<Teacher> teacherFilter(List<Teacher>teachers) {
@@ -35,10 +38,10 @@ public class Main {
             teachers.stream().filter(s -> s.getName().equals("A")).forEach(s -> System.out.println(s));
             return stream;
         }
-        public static Stream<Teacher> teacherStream (List<Teacher>teachers) {
+        public static void teacherStream (List<Teacher>teachers) {
         Stream stream1 = teachers.stream();
-        teachers.stream().sorted().forEach(x -> System.out.println(x));
-        return stream1;
+        stream1.forEach(z -> System.out.println(z));
+//        teachers.stream().sorted().forEach(x -> System.out.println(x));
         }
 }
 
