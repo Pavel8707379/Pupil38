@@ -1,11 +1,13 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
+
 
         Address address1 = new Address("Minsk", "Esenina", 120,15);
         Address address2 = new Address("Grodno", "Mira", 34, 56);
@@ -29,5 +31,9 @@ public class Main {
                add(teacher4);
            }};
        teachers.stream().sorted().forEach(teacher -> System.out.println(teacher));
+        System.out.println();
+
+        Comparator teacherComparator = new ComparatorTeacher();
+        teachers.stream().sorted(teacherComparator).forEach(teacher -> System.out.println(teacher));
     }
 }
