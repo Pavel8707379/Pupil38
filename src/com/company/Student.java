@@ -1,6 +1,6 @@
 package com.company;
 
-public class Student {
+public class Student implements Comparable<Student>{
         private String name;
         private String surname;
         private int age;
@@ -29,4 +29,18 @@ public class Student {
         public String displayInfo() {
             return "Учащийся" + " | " + name + " " + surname + " " + age + " " + address.displayInfo();
         }
+
+    @Override
+    public String toString() {
+        return "Student" + " " +
+                "name" + " " + name  +
+                "surname" + " " + surname +  " " +
+                "age" + " " + age +
+                "address" + " " + address;
     }
+
+    @Override
+    public int compareTo(Student o) {
+        return this.name ;
+    }
+}

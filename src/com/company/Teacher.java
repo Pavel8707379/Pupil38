@@ -1,6 +1,8 @@
 package com.company;
 
-    public class Teacher {
+import java.util.Comparator;
+
+public class Teacher implements Comparable<Teacher> {
         public String name;
         private String surName;
         private int age;
@@ -50,4 +52,21 @@ package com.company;
         public String displayInfo(){
             return  "Преподаватель" + " |" + name + " " + surName + " " + age + " " + address.displayInfo() + " " + "ЗП" + " | " + sum;
         }
+    public String toString() {
+        return "Teacher" + " | " + " " +
+                "name" + " " + name + " " +
+                "surName" + " " + surName + " " +
+                "age" + " " + age + " " +
+                "day" + " " + day + " " +
+                "time" + " " + time + " " +
+                "rat" +" " + rate + " " +
+                "address" + " " + address + " " +
+                "sum" + " " + sum ;
     }
+
+    @Override
+    public int compareTo(Teacher o) {
+        return this.age - o.age;
+    }
+
+}
