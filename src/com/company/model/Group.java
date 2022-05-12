@@ -1,5 +1,8 @@
-package com.company;
+package com.company.model;
 
+
+import com.company.model.Student;
+import com.company.model.Teacher;
 
 import java.util.ArrayList;
 
@@ -7,7 +10,7 @@ public class Group {
         private String groupName;
         private int course;
         private Student student;
-        private  Teacher teacher;
+        private Teacher teacher;
         private ArrayList<Student> pupil;
 
 

@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.model.Teacher;
+
 import java.util.Comparator;
 
 public class ComparatorTeacher implements Comparator<Teacher> {

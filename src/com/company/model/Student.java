@@ -1,6 +1,8 @@
-package com.company;
+package com.company.model;
 
-public class Student implements Comparable<Student>{
+import com.company.model.Address;
+
+public class Student {
         private String name;
         private String surname;
         private int age;
@@ -39,13 +41,12 @@ public class Student implements Comparable<Student>{
                 "address" + " " + address;
     }
 
-    @Override
-    public int compareTo(Student o) {
-        return o;
+//    @Override
+//    public int compareTo(Student o) {
+//        return o;
     }
 
-//    @Override
+//     @Override
 //    public int compareTo(Student o) {
 //        return this.name ;
 //    }
-}
